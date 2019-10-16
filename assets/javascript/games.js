@@ -1,71 +1,157 @@
-// alert("test");
-// console.log (purpleC);
+
 // Global Variables
+// ____________________________________________________________________
+
     //Crystal Tracking-got this from solution video would have done seperatly
     var crystal = {
             purple: {
-                name: "amethyst",
                 value: 0
             },
             red:    {
-                name: "ruby",
                 value: 0
             },       
             blue:   {
-                name: "saphire",
                 value: 0
             },
             green:  {
-                name: "emerald",
                 value: 0
-            }
+            },
     };
-        //Track scoring
-    let your_score  = 0;
-    let your_target = 0;
-    let wins        = 0;
-    let losses      = 0;
-    console.log (wins,losses,your_score,your_target );
-
+        
+    
+    var wins        = 0;
+    var losses      = 0;
+    your_score      = 0;
+    your_target     = 0;
+    
+// ____________________________________________________________________
 // ____________________________________________________________________
 
 // Functions
+// ____________________________________________________________________
+
+//Fetch random number between any "two values" function
+        // Thank you Stack Overflow
+        var randomNum = function(lowRange,hiRange) { 
+            return  Math.floor(Math.random() * (hiRange - lowRange + 1) + lowRange);
+        };
+//Starts and Resets the game
+    //  var restart = function() { 
+    //     your_score                  =0;
+
+    // Score = 
+     //  Set Target score:Random number between 19-120
+        your_target                 =randomNum(19,120);
+        //adjust html
+        $("#targets").html (your_target);
+    
+        
+        
+            //add selected Crystal value to previous value
+                //check actual gainst target, if equal win++ "you Win"
+        //  Set Crystal valuses:Random numbers between 1-12
+        //set for purple
+        crystal.purple.value        =randomNum(1,12);
+        //set for red
+        crystal.red.value           =randomNum(1,12);
+        //set for blue
+        crystal.blue.value          =randomNum(1,12);
+        //set for green
+        crystal.green.value         =randomNum(1,12);
+
+        //DBDBDBDBDBDBDBDBDBDBDBDBDBDBDBDBDBDBDBDBDBDBDBDBDBDBB
+        console.log ("*******************************************************")
+        console.log ("purple="+crystal.purple.value,
+        "red="+crystal.red.value,
+        "blue="+crystal.blue.value,
+        "green="+crystal.green.value);
+        console.log ("*******************************************************")
+        //DBDBDBDBDBDBDBDBDBDBDBDBDBDBDBDBDBDBDBDBDBDBDBDBDBDBB
+    // };
+        var crysVal = function(crystal) {
+                your_score = your_score + crystal.value;
+                resultCk();
+                };
+          
+        var resultCk = function() {
+                    if (your_score === your_target) {
+                            alert ("You Won");
+                            //DBDBDBDBDBDBDBDBDBDBDBDBDBDBDBDBDBDBDBDBDBDBDBDBDBDBB
+                            console.log("^^^^^^^^^^^^^^^^^^^^")
+                            console.log ("You Win");
+                            console.log("^^^^^^^^^^^^^^^^^^^^")
+                            //DBDBDBDBDBDBDBDBDBDBDBDBDBDBDBDBDBDBDBDBDBDBDBDBDBDBB
+                            wins++;
+                        }
+                    //check if > target, if true, loses ++ "you loose"
+                    else if(your_score > your_target){
+                            alert   ("You Lose");//DBDBDBDBDBDBDBDBDBDBDBDBDBDBDBDBDBDBDBDBDBDBDBDBDBDBB
+                            console.log("^^^^^^^^^^^^^^^^^^^^")
+                            console.log ("You Lose");
+                            console.log("^^^^^^^^^^^^^^^^^^^^")
+                            //DBDBDBDBDBDBDBDBDBDBDBDBDBDBDBDBDBDBDBDBDBDBDBDBDBDBB
+                            losses++;
+                        };
+                        //DBDBDBDBDBDBDBDBDBDBDBDBDBDBDBDBDBDBDBDBDBDBDBDBDBDBB
+                        console.log ("############################")
+                        console.log ("your Score:"+ your_score);
+                        console.log ("Wins:"+wins,"Losses:"+losses);
+                        console.log ("############################")
+                        //DBDBDBDBDBDBDBDBDBDBDBDBDBDBDBDBDBDBDBDBDBDBDBDBDBDBB
+                        //adjust html       
+                        $("#yours").html (your_score);
+                        $("#winS").html (wins);
+                        $("#lossesS").html (losses);
+                        
+            }
+
+           
+        //DBDBDBDBDBDBDBDBDBDBDBDBDBDBDBDBDBDBDBDBDBDBDBDBDBDBB
+        console.log ("++++++++++++++++++++++")
+        console.log ("your Target:"+ your_target);
+        console.log ("++++++++++++++++++++++")
+        //DBDBDBDBDBDBDBDBDBDBDBDBDBDBDBDBDBDBDBDBDBDBDBDBDBDBB
+
+       
+
+    
+       //check if < target, if true, "click again"
 
 // _____________________________________________________________________
+// ____________________________________________________________________
 
 // Process logic
-
 // ______________________________________________________________________
-    // Click event on crystals
+
+
+// start();
+       
+
+//  Player clcks a crystal, 
+// Click event logic for crystals
+    // Update crystal object with crystal value function   
+
 $("#purple").click(function() {
-   alert ("purple");
+    crysVal(crystal.purple);
 });
+
 $("#red").click(function() {
-    alert ("red");
+    crysVal(crystal.red);
  });
  $("#blue").click(function() {
-    alert ("blue");
+    crysVal(crystal.blue);
  });
  $("#green").click(function() {
-    alert ("green");
+    crysVal(crystal.green);
  });
+  
+        
 
-// start_function
-        // Counters reset to zero (wins,)
-//  game_loop function
-        // Counters reset to zero (target, actual)
 
-//  Random generator between 19-120
-        //set target 
-//  Random generator between 1-12
-        //set for purple
-        //set for red
-        //set for blue
-        //set for green
-//  Player clcks a crystal, 
-        //add to actual
-        //check actual gainst target, if equal win++ "you Win"
-        //check if > target, if true, loses ++ "you loose"
-        //check if < target, if true, "click again"
-//  
-//  
+        
+       
+        
+        
+
+
+
