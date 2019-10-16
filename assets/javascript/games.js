@@ -1,5 +1,5 @@
-alert("test");
-console.log (purpleC);
+// alert("test");
+// console.log (purpleC);
 // Global Variables
     //Crystal Tracking-got this from solution video would have done seperatly
     var crystal = {
@@ -25,6 +25,7 @@ console.log (purpleC);
     let your_target = 0;
     let wins        = 0;
     let losses      = 0;
+    console.log (wins,losses,your_score,your_target );
 
 // ____________________________________________________________________
 
@@ -36,12 +37,21 @@ console.log (purpleC);
 
 // ______________________________________________________________________
     // Click event on crystals
-$("#purpleC").click = (function() {
-    console.log ("works");
+$("#purple").click(function() {
+   alert ("purple");
 });
+$("#red").click(function() {
+    alert ("red");
+ });
+ $("#blue").click(function() {
+    alert ("blue");
+ });
+ $("#green").click(function() {
+    alert ("green");
+ });
 
 // start_function
-        // Counters reset to zero (wins, losses)
+        // Counters reset to zero (wins,)
 //  game_loop function
         // Counters reset to zero (target, actual)
 
@@ -54,9 +64,8 @@ $("#purpleC").click = (function() {
         //set for green
 //  Player clcks a crystal, 
         //add to actual
-        //check actual against target, if equal win++ "you Win"
+        //check actual gainst target, if equal win++ "you Win"
         //check if > target, if true, loses ++ "you loose"
         //check if < target, if true, "click again"
-//  game_loop
 //  
-
+//  
