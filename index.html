@@ -6,21 +6,23 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
         <title>Crystal Game</title>
+        <link rel="stylesheet" href="assets/css/reset.css">
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <link rel="stylesheet" href="assets/css/style.css">
     </head>
 
     <body>
         <div class=container>
             <div class="jumbotron">
                 <div class=container>
-                <h1 class= "text-center""display-5">Crystal Collector</h1>
+                <h1 class= "text-center""display-5" id = "gameT">Crystal Collector</h1>
                 </div>
             </div>    
                 <div class = "row">
                     <div class =  "col-sm-3">
                     </div>
                     <div class = "col-sm-6">
-                                <div class="card">
+                                <div class="card" id = "insBox">
                                         <div class="card-body">
                                         <h5 class="text-center""card-title">How to Play</h5>
                                         <p class="card-text">The computer picks a "Target Score" for you to attempt to match.  Each crystal has a numeric value.  As you click on each crystal, "Your Score" will increase. If you match the target, you win.  If you go over your lose.  Good Luck!
@@ -35,7 +37,7 @@
                    
                 <div class = "row">
                     <div class =  "col-sm-6">
-                                <div class= "card">
+                                <div class= "card"id = "ts">
                                         <div class= "text-center""card-body",>
                                         <h3>Target Score = </h3>
                                         </div>
@@ -45,7 +47,7 @@
                                 </div>
                     </div>
                     <div class =  "col-sm-6">
-                                <div class="card">
+                                <div class="card" id = "ys">
                                         <div class= "text-center""card-body">
                                        <h3>Your Score = </h3> 
                                         </div>
@@ -64,23 +66,14 @@
                                 <div class="card">
                                         <img src="./assets/images/purple.png" 
                                         id="purple">
-                                        <!-- class="card-img-top" 
-                                        button class="btn">Button</button>
-                                        <div class="card-body">
-                                        <h5 class="card-title">Amethyst</h5>
                                         
-                                        </div> -->
                                 </div>
                         </div>
                     <div class = "col-sm-1">
                                 <div class="card">
                                         <img src="./assets/images/red.png"
                                         id = "red">
-                                        <!-- class="card-img-top" 
-                                        button class="btn">Button</button>
-                                        <div class="card-body">
-                                        <h5 class="card-title">Ruby</h5>
-                                        </div> --> 
+                                       
                                 </div>
                         </div>
                     
@@ -89,22 +82,14 @@
                                 <div class="card">
                                         <img src="./assets/images/blue.png"
                                         id = "blue">
-                                        <!-- class="card-img-top" 
-                                        button class="btn">Button</button>
-                                        <div class="card-body">
-                                        <h5 class="card-title"Saphire</h5>
-                                        </div> -->
+                                        
                                 </div>
                         </div>
                     <div class = "col-sm-1">
                                 <div class="card">
                                         <img src="./assets/images/green.png" 
                                         id = "green">
-                                        <!-- class="card-img-top" 
-                                        button class="btn">Button</button>
-                                        <div class="card-body">
-                                        <h5 class="card-title">Emerald</h5>
-                                        </div> -->
+                                        
                                 </div>
                     </div>
                     <div class = "col-sm-4"></div>  
@@ -116,7 +101,7 @@
                 </div>
                 <div class = "row">
                         <div class =  "col-sm-6">
-                                    <div class="card">
+                                    <div class="card"id = "wc">
                                         <div class= "text-center""card-body">
                                         Wins Count = 
                                         </div>
@@ -126,7 +111,7 @@
                                     </div>
                             </div>
                             <div class =  "col-sm-6">
-                                    <div class="card">
+                                    <div class="card"id = "lc">
                                         <div class= "text-center""card-body">
                                         Losses Count = 
                                         </div>

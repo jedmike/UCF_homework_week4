@@ -1,1 +1,15 @@
-background-color:lightgreen|
+body {background-color: blanchedalmond;}
+.container {background-color: coral;}
+.jumbotron {background-color: coral;;}
+#insBox {background-color: blanchedalmond; border-block-color: black;}
+#gameT {font-style: italic;font-size: 40pt;;}
+h5 {font-size: 30pt;}
+.row {background-color: cornflowerblue;}
+#ts {background-color: cornflowerblue;color:black}
+#ys {background-color: cornflowerblue;color:black}
+#wc {background-color: cornflowerblue;color:black}
+#lc {background-color: cornflowerblue;color:black}
+#purple {background-color: coral;}
+#red {background-color: coral;}
+#blue {background-color: coral;}
+#green {background-color: coral;}
